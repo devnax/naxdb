@@ -1,5 +1,4 @@
-const { debug } = require("./debug");
-const auth = require("../mysql2/lib/auth_41.js");
+const auth = require("../mysql/lib/auth_41.js");
 
 const processResult = (cl_conn, db_result) => {
   if (!Array.isArray(db_result)) {
@@ -104,7 +103,7 @@ const handle_events = function ({ server, onQuery, db }) {
       }
 
       if (err && err.code)
-        debug("[ERROR]", `Client connection closed (${err.code})`);
+        console.warn("[ERROR]", `Client connection closed (${err.code})`);
     });
   });
 };

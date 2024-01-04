@@ -1,7 +1,5 @@
 require("./lib/mysql-monkeypatch");
-
-const mysql = require("./mysql2");
-const fs = require("fs");
+const mysql = require("./mysql");
 const proxy = require("./proxy");
 const handle_events = require("./lib/mysql");
 
@@ -13,9 +11,6 @@ const start_server = function ({
   db_password,
   pool,
   hold_connection,
-  logs_dir,
-  encrypt_fields,
-  encrypt_secret,
 }) {
   const server = mysql.createServer();
 
@@ -32,9 +27,6 @@ const start_server = function ({
         db_password,
         pool,
         hold_connection,
-        logs_dir,
-        encrypt_fields,
-        encrypt_secret,
       });
       handle_events({ server, onQuery, db });
     }
@@ -50,9 +42,4 @@ start_server({
   db_password: "12345678",
   pool: 10,
   hold_connection: false,
-  logs_dir: fs.realpathSync(`${__dirname}/.data/logs`, {
-    encoding: "utf8",
-  }),
-  encrypt_fields: /ENCRYPT_\d+/,
-  encrypt_secret: "test",
 });

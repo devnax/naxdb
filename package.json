@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon start_mysql.js"
+    "start": "nodemon src/start_mysql.js"
   },
   "keywords": [],
   "author": "Naxrul Ahmed",

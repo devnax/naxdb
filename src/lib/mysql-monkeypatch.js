@@ -1,4 +1,4 @@
-const Packet = require("../mysql2/lib/packets/packet");
+const Packet = require("../mysql/lib/packets/packet");
 
 const rs = Packet.prototype.readString;
 
