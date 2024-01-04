@@ -1,0 +1,17 @@
+{
+  "name": "naxdb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon start_mysql.js"
+  },
+  "keywords": [],
+  "author": "Naxrul Ahmed",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.2.0",
+    "mysql2": "^3.6.5",
+    "nodemon": "^3.0.2"
+  }
+}
