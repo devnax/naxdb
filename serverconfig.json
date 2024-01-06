@@ -1,0 +1,18 @@
+{
+  "pertition_limit": 1000,
+  "row_limit": 200,
+  "shard_prefix": "shard",
+  "pertition_prefix": "p",
+  "credential": {
+    "user": "root",
+    "password": "12345678"
+  },
+  "hosts": [
+    {
+      "host": "localhost",
+      "port": 3306,
+      "user": "root",
+      "password": "12345678"
+    }
+  ]
+}

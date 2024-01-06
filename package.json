@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/start_mysql.js"
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "Naxrul Ahmed",
@@ -12,6 +12,7 @@
   "dependencies": {
     "crypto-js": "^4.2.0",
     "mysql2": "^3.6.5",
+    "node-sql-parser": "^4.17.0",
     "nodemon": "^3.0.2"
   }
 }
